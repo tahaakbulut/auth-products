@@ -1,0 +1,117 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product001",
+      "price": 10,
+      "score": 1,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 2,
+      "name": "Product002",
+      "price": 20,
+      "score": 1,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "name": "Product003",
+      "price": 30,
+      "score": 3,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 4,
+      "name": "Product004",
+      "price": 40,
+      "score": 2,
+      "image": "https://picsum.photos/200"
+    }
+  ],
+  "details": [
+    {
+      "id": 1,
+      "name": "Product001",
+      "price": 10,
+      "currency": "$",
+      "arrival": "11.15.2022",
+      "score": 1,
+      "image": "https://picsum.photos/800",
+      "desc": "Product Desc 001",
+      "comments": [
+        {
+          "userId": 1,
+          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia",
+          "star": 3
+        },
+        {
+          "userId": 2,
+          "comment": "Harika Değil mi?",
+          "star": "3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Product002",
+      "price": 20,
+      "currency": "$",
+      "arrival": "11.15.2022",
+      "score": 1,
+      "image": "https://picsum.photos/800",
+      "desc": "Product Desc 002",
+      "comments": [
+        {
+          "userId": 1,
+          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia",
+          "star": 3
+        },
+        {
+          "userId": 2,
+          "comment": "dsadsadsadsa asda",
+          "star": "1"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Product003",
+      "price": 30,
+      "currency": "$",
+      "arrival": "11.15.2022",
+      "score": 3,
+      "image": "https://picsum.photos/800",
+      "desc": "Product Desc 003",
+      "comments": [
+        {
+          "userId": 1,
+          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia",
+          "star": 3
+        },
+        {
+          "userId": 2,
+          "comment": "5 verdim",
+          "star": "5"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Product004",
+      "price": 40,
+      "currency": "$",
+      "arrival": "11.15.2022",
+      "score": 2,
+      "image": "https://picsum.photos/800",
+      "desc": "Product Desc 004",
+      "comments": [
+        {
+          "userId": 1,
+          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia",
+          "star": 3
+        }
+      ]
+    }
+  ]
+}
