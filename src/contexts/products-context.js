@@ -41,7 +41,6 @@ export const ProductProvider = ({ children }) => {
   const setComment = (id, data) => {
     const isNewComments = !product.comments.find((comment) => comment.userId === data.userId);
     const updatedComments = product.comments.map((comment) => {
-      console.log();
       return comment.userId === data.userId ? data : comment;
     });
 
