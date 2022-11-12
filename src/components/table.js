@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BiSortAlt2 } from 'react-icons/bi';
+import { Rate } from './rate';
 
 export const Table = ({ tableData, handleAction, actionTag }) => {
   const [sortType, setSortType] = useState(false);
@@ -16,7 +17,7 @@ export const Table = ({ tableData, handleAction, actionTag }) => {
   return (
     <div className="container mx-auto">
       <div className="overflow-x-auto mt-10">
-        <table className="table-fixed mx-auto lg:text-xl">
+        <table className="table-fixed mx-auto lg:text-xl text-center">
           <thead>
             <tr>
               {Object.keys({ ...tableData[0] })
@@ -33,19 +34,25 @@ export const Table = ({ tableData, handleAction, actionTag }) => {
             </tr>
           </thead>
           <tbody>
-            {tableData.map((obj, i) => (
-              <tr key={i}>
-                {Object.values(obj)
-                  .filter((e, i) => i !== 0)
-                  .map((e, index) => (
-                    <td className="border-t-[1px] border-primary px-2 py-1" key={index}>
-                      {e}
+            {tableData.map((row) => (
+              <tr key={row.id} id={row.id}>
+                {Object.entries(row)
+                  .filter((e) => e[0] !== 'id')
+                  .map((col, i) => (
+                    <td className="border-t-[1px] border-primary px-2 py-1" key={i}>
+                      {col[0] === 'image' ? (
+                        <img src={col[1]} alt="" width={80} height={45} />
+                      ) : col[0] === 'score' ? (
+                        <Rate name={`rate${row.id}`} defaultValue={col[1]} disabled />
+                      ) : (
+                        <>{col[1]}</>
+                      )}
                     </td>
                   ))}
                 {handleAction && (
                   <td
                     className="cursor-pointer border-t-[1px] border-primary px-2 py-1 text-center"
-                    onClick={() => handleAction(obj.id)}
+                    onClick={() => handleAction(row.id)}
                   >
                     {actionTag}
                   </td>
